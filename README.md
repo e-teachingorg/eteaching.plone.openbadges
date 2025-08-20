@@ -1,8 +1,8 @@
 # eteaching.plone.openbadges
 
-Open Badge integration for Plone.
+Open Badge integration for [Plone 6](https://plone.org/).
 
-Plone is enabled to host badges with the add-on, and the operator of the Plone website acts as the issuing institution. Schemas have been defined for two content types: for the OpenBadge and the BadgeAssertion. The OpenBadge is created by the organizer of the education program for which the badge is awarded, with a graphic in the form of an SVG file and award criteria. The so-called BadgeAssertion is created from this template for an individual person and additionally provided with information about the awarding institution. Encrypted information about the earner is also included in the form of an email address of a registered plone member. The badge assertion is thus the personalized badge and can then be shared by the recipient.
+Plone is enabled to host open badges with the add-on. The operator of the Plone website acts as the issuing institution. Schemas have been defined for two content types: for the OpenBadge and the BadgeAssertion. The OpenBadge is created by the organizer of the education program for which the badge is awarded, with a graphic in the form of an SVG file and award criteria. The so-called BadgeAssertion is created from this template for an individual person and additionally provided with information about the awarding institution. Encrypted information about the earner is also included in the form of an email address of a registered plone member. The badge assertion is thus the personalized badge and can then be shared by the recipient.
 
 ## Features
 
