@@ -13,9 +13,8 @@ Plone is enabled to host open badges with the add-on. The operator of the Plone 
 
 
 ## Prerequisites
-- Plone 6.1 (Classic UI), Plone 6.0 (Classic UI)
-- Python3 3.10, 3.12, 3.13 (Plone 6.1), 3.8, 3.9, 3.10, 3.11 (Plone 6.0)
-- Python3 venv module
+* Plone 6.1 (Classic UI), Plone 6.0 should also work
+* Python 3.10, 3.12, 3.13
 - Git
 
 ## Install with Plone 6.1 buildout
