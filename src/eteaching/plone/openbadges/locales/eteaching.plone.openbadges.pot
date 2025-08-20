@@ -1,0 +1,282 @@
+#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+#SOME DESCRIPTIVE TITLE.
+#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-06-27 11:32+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: eteaching.plone.openbadges\n"
+
+#: ./profiles/default/types/BadgeAssertion.xml
+msgid "A badge assertion can be defined as the badge received by a recipient."
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:48
+msgid "Assertion"
+msgstr ""
+
+#: ./views/open_badge_view.py:60
+msgid "Badge could not be created! Have you confirmed that you have met the requirements?"
+msgstr ""
+
+#: ./views/open_badge_view.py:59
+msgid "Badge created"
+msgstr ""
+
+#: ./profiles/default/types/BadgeAssertion.xml
+msgid "BadgeAssertion"
+msgstr ""
+
+#: ./views/open_badge_view.pt:70
+msgid "Create badge now"
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:95
+msgid "Criteria"
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:99
+#: ./views/open_badge_view.pt:30
+msgid "Description"
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:58
+msgid "Download"
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:60
+msgid "Download Badge"
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:133
+msgid "E-mail address"
+msgstr ""
+
+#: ./views/open_badge_view.pt:44
+msgid "Get the badge"
+msgstr ""
+
+#: ./views/open_badge_view.pt:52
+msgid "Go to Badge"
+msgstr ""
+
+#: ./views/open_badge_view.pt:66
+msgid "I hereby confirm that I have fulfilled the requirements."
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:117
+msgid "In the existing Open Badges ecosystem, recipients are identified by email address virtually all of the time. However, the identity of the recipient is concealed for data protection reasons. Here you can check whether a specific e-mail address is valid for this badge."
+msgstr ""
+
+#: ./configure.zcml:26
+msgid "Installs the eteaching.plone.openbadges add-on."
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:86
+msgid "Issue Date"
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:42
+msgid "Issuer"
+msgstr ""
+
+#: ./views/open_badge_view.pt:77
+msgid "It is currently not possible to issue badges."
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:50
+msgid "Machine-readable JSON"
+msgstr ""
+
+#: ./views/assertion_view.py:23
+msgid "No assertion available"
+msgstr ""
+
+#: ./profiles/default/types/OpenBadge.xml
+msgid "Open Badges are digital badges that are awarded to people for their skills, achievements or participation."
+msgstr ""
+
+#: ./profiles/default/types/OpenBadge.xml
+msgid "OpenBadge"
+msgstr ""
+
+#: ./profiles/default/controlpanel.xml
+msgid "OpenBadge Settings"
+msgstr ""
+
+#: ./views/controlpanel.py:10
+msgid "OpenBadges settings"
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:90
+msgid "Recipient"
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:102
+#: ./views/open_badge_view.pt:33
+msgid "Relation"
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:64
+msgid "Share"
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:70
+msgid "Share on LinkedIn"
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:139
+msgid "Submit"
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:128
+msgid "The badge is not valid for the e-mail address"
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:124
+msgid "The badge is valid for the e-mail address"
+msgstr ""
+
+#: ./configure.zcml:35
+msgid "Uninstalls the eteaching.plone.openbadges add-on."
+msgstr ""
+
+#: ./views/badge_assertion_view.pt:116
+msgid "Validate the badge"
+msgstr ""
+
+#: ./views/open_badge_view.py:58
+msgid "You must be logged in to be assigned a badge!"
+msgstr ""
+
+#: ./interfaces.py:18
+msgid "badge_storage_root"
+msgstr ""
+
+#. Default: "Congratulations. You have already received your badge. It was issued for the e-mail address ${email} You can now download it."
+#: ./views/open_badge_view.pt:48
+msgid "congratulations"
+msgstr ""
+
+#: ./configure.zcml:26
+msgid "eteaching.plone.openbadges"
+msgstr ""
+
+#: ./configure.zcml:35
+msgid "eteaching.plone.openbadges (uninstall)"
+msgstr ""
+
+#: ./interfaces.py:19
+msgid "help_badge_storage_root"
+msgstr ""
+
+#. Default: "Criteria for earning the badge."
+#: ./content/open_badge.py:28
+msgid "help_criteria"
+msgstr ""
+
+#: ./content/badge_assertion.py:24
+#: ./content/open_badge.py:22
+msgid "help_image"
+msgstr ""
+
+#. Default: "Learning resources the badge belongs to."
+#: ./content/open_badge.py:46
+msgid "help_learning_resources"
+msgstr ""
+
+#. Default: "The title prefix is part of the title and is linked to the title in the badge. The prefix can be entered separately for display on the website. The prefixes are predefined in the OpenBadges settings."
+#: ./content/open_badge.py:37
+msgid "help_title_prefix"
+msgstr ""
+
+#. Default: "The title prefixes are part of the title and can be predefined here. One prefix is always entered per line."
+#: ./interfaces.py:26
+msgid "help_title_prefix_def"
+msgstr ""
+
+#: ./content/open_badge.py:65
+msgid "label_allocation_period_end"
+msgstr ""
+
+#: ./content/open_badge.py:55
+msgid "label_allocation_period_start"
+msgstr ""
+
+#. Default: "Criteria"
+#: ./content/open_badge.py:27
+msgid "label_criteria"
+msgstr ""
+
+#: ./content/badge_assertion.py:40
+msgid "label_email"
+msgstr ""
+
+#: ./content/badge_assertion.py:23
+#: ./content/open_badge.py:21
+msgid "label_image"
+msgstr ""
+
+#. Default: "Description"
+#: ./content/open_badge.py:87
+#: ./interfaces.py:42
+msgid "label_issuer_description"
+msgstr ""
+
+#. Default: "Email"
+#: ./content/open_badge.py:93
+#: ./interfaces.py:47
+msgid "label_issuer_email"
+msgstr ""
+
+#. Default: "Name"
+#: ./content/open_badge.py:75
+#: ./interfaces.py:33
+msgid "label_issuer_name"
+msgstr ""
+
+#. Default: "URL"
+#: ./content/open_badge.py:81
+#: ./interfaces.py:38
+msgid "label_issuer_url"
+msgstr ""
+
+#. Default: "Learning resources"
+#: ./content/open_badge.py:45
+msgid "label_learning_resources"
+msgstr ""
+
+#: ./content/badge_assertion.py:33
+msgid "label_recipient"
+msgstr ""
+
+#. Default: "Issuer"
+#: ./content/open_badge.py:100
+#: ./interfaces.py:52
+msgid "label_schema_issuer"
+msgstr ""
+
+#. Default: "Title"
+#: ./content/badge_assertion.py:19
+msgid "label_title"
+msgstr ""
+
+#. Default: "Title prefix"
+#: ./content/open_badge.py:36
+msgid "label_title_prefix"
+msgstr ""
+
+#. Default: "Title prefixes"
+#: ./interfaces.py:25
+msgid "label_title_prefix_def"
+msgstr ""

@@ -1,0 +1,71 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="eteaching.plone.openbadges">
+
+
+    <!-- OPEN BADGE SETTINGS CONTROL PANEL -->
+  
+   
+    <include package="plone.app.registry" />
+    <browser:page
+        name="open-badges-settings"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".controlpanel.OpenBadgeSettingsControlPanel"
+        permission="eteaching.plone.openbadges.ManageOpenBadges"
+        />
+
+
+	<!-- REIMPORT PROFILE -->
+
+    <browser:page
+        name="reimport-profile-open-badges"
+        permission="cmf.ManagePortal"
+        class=".controlpanel.Setup"
+        attribute="reimportProfile"
+        for="Products.CMFCore.interfaces.ISiteRoot"
+    />
+
+
+  <!-- CONTENT VIEWS PLONE-->
+
+  <!-- -*- extra stuff goes here -*- -->
+
+  <browser:page
+    name="assertion.json"
+    for="eteaching.plone.openbadges.content.badge_assertion.IBadgeAssertion"
+    class=".assertion_view.AssertionView"
+    permission="zope2.View"
+    layer="eteaching.plone.openbadges.interfaces.IEteachingPloneOpenbadgesLayer"
+    />
+
+  <browser:page
+    name="issuer"
+    for="eteaching.plone.openbadges.content.badge_assertion.IBadgeAssertion"
+    class=".issuer_view.IssuerView"
+    template="issuer_view.pt"
+    permission="zope2.View"
+    layer="eteaching.plone.openbadges.interfaces.IEteachingPloneOpenbadgesLayer"
+    />
+
+  <browser:page
+    name="view"
+    for="eteaching.plone.openbadges.content.badge_assertion.IBadgeAssertion"
+    class=".badge_assertion_view.BadgeAssertionView"
+    template="badge_assertion_view.pt"
+    permission="zope2.View"
+    layer="eteaching.plone.openbadges.interfaces.IEteachingPloneOpenbadgesLayer"
+    />
+
+  <browser:page
+    name="view"
+    for="eteaching.plone.openbadges.content.open_badge.IOpenBadge"
+    class=".open_badge_view.OpenBadgeView"
+    template="open_badge_view.pt"
+    permission="zope2.View"
+    layer="eteaching.plone.openbadges.interfaces.IEteachingPloneOpenbadgesLayer"
+    />
+	  
+</configure>

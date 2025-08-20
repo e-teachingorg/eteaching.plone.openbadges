@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<rolemap>
+
+	<permissions>
+
+	    <permission name="eteaching.plone.openbadges: Manage OpenBadges" acquire="True">
+	      <role name="OpenBadges Manager"/>
+	    </permission>
+
+		<!-- -*- extra stuff goes here -*- -->
+
+    <permission name="eteaching.plone.openbadges: Add BadgeAssertion" acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Owner"/>
+      <role name="Contributor"/>
+    </permission>
+
+		
+		<permission name="eteaching.plone.openbadges: Add OpenBadge" acquire="True">
+		  <role name="Manager"/>
+		  <role name="Site Administrator"/>
+		  <role name="Owner"/>
+		  <role name="Contributor"/>
+		</permission>
+	
+	
+	</permissions>
+</rolemap>

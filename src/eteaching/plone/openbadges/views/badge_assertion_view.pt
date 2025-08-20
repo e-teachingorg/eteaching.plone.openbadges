@@ -1,0 +1,150 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://xml.zope.org/namespaces/metal"
+	xmlns:tal="http://xml.zope.org/namespaces/tal" xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+	i18n:domain="eteaching.plone.openbadges" metal:use-macro="context/main_template/macros/master">
+
+<body>
+
+	<metal:override fill-slot="top_slot"
+		tal:define="disable_column_one python:request.set('disable_plone.leftcolumn',1);" />
+	<metal:content-core fill-slot="main">
+		<metal:block define-macro="main">
+			<div id="content-core" tal:define="
+				assertion_dict view/assertion_dic|nothing;
+				badge assertion_dict/badge|nothing;
+				issuer badge/issuer|nothing;
+				issued_on assertion_dict/issuedOn|nothing;
+				vi view/verify_identity;
+				toLocalizedTime nocall: context/@@plone/toLocalizedTime;
+				image nocall:context/image;
+				rel view/get_related_content;
+				t python:toLocalizedTime(issued_on);">
+
+				<div class="container overflow-hidden">
+
+					<div class="row column-gap-4">
+
+						<div tal:condition="nocall:image"
+							class="p-4 mb-4 card col-sm-12 col-lg-4 border-secondary text-white bg-secondary">
+
+                            <div class="p-4 bg-white">
+                            <div class="card-body">
+								<img tal:attributes="
+								src string:${context/absolute_url}/@@images/image;
+								alt string: Card image cap;
+								class string:">
+							</div>
+                            </div>
+
+
+							<div class="card-body p-0 pt-4">
+								<div class="card-text">
+									<dl>
+										<dt class="col-sm-12" i18n:translate="">Issuer</dt>
+										<dd class="col-sm-12">
+											<a tal:attributes="
+										href string:${context/absolute_url}/issuer;
+										class string:link-underline-light link-light" tal:content="issuer/name"></a>
+										</dd>
+										<dt class="col-sm-12" i18n:translate="">Assertion</dt>
+										<dd class="col-sm-12">
+											<a tal:attributes="
+											href string:${context/absolute_url}/assertion.json;
+											alt string:Assertion as JSON;
+											class string:link-underline-light link-light" i18n:translate="">
+												Machine-readable JSON
+											</a>
+										</dd>
+
+										<dt class="col-sm-12" i18n:translate="">Download</dt>
+										<dd class="col-sm-12">
+											<a class="card-link" tal:attributes="
+												href string:${context/absolute_url}/@@images/image;
+												class string:link-underline-light link-light" i18n:translate="">Download Badge</a>
+										</dd>
+										<dt class="col-sm-12" i18n:translate="">Share</dt>
+										<dd class="col-sm-12">
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+											  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+											</svg>
+											
+											<a class="card-link" tal:attributes="
+												href view/linkedin_share;
+												class string:link-underline-light link-light;
+												target string:_blank" i18n:translate="">Share on LinkedIn
+											</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+
+						<div tal:define="titles python:view.get_titles(badge['name'])" class="col-sm-12 col-lg-7 card-text pb-4">
+							<p style="font-size: larger" tal:condition="titles/pre" tal:content="titles/pre"></p>
+							<h1 tal:content="titles/title">Title</h1>
+							<div class="pt-4">
+								<dl class=" row">
+									<dt class="col-sm-12" i18n:translate="">Issue Date</dt>
+									<dd class="col-sm-12" tal:content="t"> 10.09.2024 </dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-12" i18n:translate="">Recipient</dt>
+									<dd class="col-sm-12" tal:condition="not: vi/result">*****</dd>
+									<dd class="col-sm-12" tal:condition="vi/result" tal:content="vi/email"></dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-12" i18n:translate="">Criteria</dt>
+									<dd class="col-sm-12" tal:content="badge/criteria/narrative"> Criteria </dd>
+								</dl>
+								<dl class="row">
+									<dt class="col-sm-12" i18n:translate="">Description</dt>
+									<dd class="col-sm-12" tal:content="badge/description"> Description </dd>
+								</dl>
+								<dt class="col-sm-12" i18n:translate="">Relation</dt>
+								<dd class="col-sm-12" tal:repeat="r rel">
+									<a tal:attributes="
+							href r/url;
+							class string:link-underline-dark link-dark" tal:content="r/title"></a>
+								</dd>
+							</div>
+						</div>
+
+					</div>
+
+
+					<div class="row pb-4">
+						<div class="col-sm-12">
+							<h2 i18n:translate="">Validate the badge</h2>
+							<p i18n:translate="">
+								In the existing Open Badges ecosystem, recipients are identified by email
+								address virtually all of the time. However, the identity of the recipient
+								is concealed for data protection reasons. Here you can check whether a specific
+								e-mail address is valid for this badge.
+							</p>
+							<p style="color:green" tal:condition="vi/result">
+								<span i18n:translate="">The badge is valid for the e-mail address</span>
+								<span tal:content="vi/email"></span>
+							</p>
+							<p style="color:red" tal:condition="python: not vi['result'] and vi['email']">
+								<span i18n:translate="">The badge is not valid for the e-mail address</span>
+								<span tal:content="vi/email"></span>
+							</p>
+							<form>
+								<div>
+									<span i18n:translate="">E-mail address</span>
+									<input tal:attributes="
+								type string:text;
+								name string:email;
+								value vi/email">
+								</div>
+								<button type="submit" class="btn btn-secondary btn-iwm-gray my-3" i18n:translate="">Submit</button>
+							</form>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</metal:block>
+	</metal:content-core>
+</body>
+
+</html>

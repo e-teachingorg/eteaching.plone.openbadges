@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<object
+    name="portal_controlpanel"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="eteaching.plone.openbadges"
+    purge="False">
+
+    <configlet
+        title="OpenBadge Settings"
+        action_id="OpenBadgeSettings"
+        appId="eteaching.plone.openbadges"
+        category="Products"
+        condition_expr=""
+        url_expr="string:${portal_url}/@@open-badges-settings"
+        visible="True"
+        i18n:attributes="title">
+            <permission>eteaching.plone.openbadges: Manage OpenBadges</permission>
+    </configlet>
+
+ </object>

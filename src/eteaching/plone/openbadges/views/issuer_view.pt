@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://xml.zope.org/namespaces/metal"
+	xmlns:tal="http://xml.zope.org/namespaces/tal" xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+	i18n:domain="eteaching.plone.openbadges" metal:use-macro="context/main_template/macros/master">
+
+<body>
+	<metal:override fill-slot="top_slot"
+		tal:define="disable_column_one python:request.set('disable_plone.leftcolumn',1);" />
+
+	<metal:content-core fill-slot="main">
+		<metal:block define-macro="main" tal:define="
+		assertion_dict view/assertion_dic;
+		badge assertion_dict/badge|nothing;
+		issuer badge/issuer|nothing">
+
+			<h1 tal:content="issuer/name"></h1>
+			<p class="lead" tal:content="issuer/description|nothing"></p>
+			<p tal:define="url issuer/url|nothing" tal:condition="url">
+				<strong>URL: </strong>
+				<a tal:attributes="
+				href url;
+				title string:URL;
+				alt string: URL;
+				class string:link-underline-light"
+					tal:content="url"></a>
+			</p>
+			<p>
+				<strong>Mail:</strong> <span tal:content="issuer/email|nothing"></span>
+			</p>
+
+		</metal:block>
+	</metal:content-core>
+
+</body>
+
+</html>

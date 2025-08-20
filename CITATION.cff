@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: eteaching.plone.openbadges
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Markus
+    family-names: Schmidt
+    email: m.schmidt@iwm-tuebingen.de
+repository-code: >-
+  https://github.com/e-teachingorg/eteaching.plone.openbadges/
+abstract: 'Create, host, and display Open Badges with Plone'
+license: GPL-2.0
+version: '1.0'
+date-released: '2025-08-20'

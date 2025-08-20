@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<registry
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="eteaching.plone.openbadges">
+
+<!-- -*- extra stuff goes here -*- -->
+
+	<!-- OPEN BADGES SETTINGS -->
+
+	<records interface="eteaching.plone.openbadges.interfaces.IOpenBadgesSettings" ></records>
+
+
+</registry>

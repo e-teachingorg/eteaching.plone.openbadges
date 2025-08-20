@@ -1,0 +1,86 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:tal="http://xml.zope.org/namespaces/tal" xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="eteaching.plone.openbadges" metal:use-macro="context/main_template/macros/master">
+
+<body>
+
+    <metal:content-core fill-slot="main">
+        <metal:block define-macro="main">
+            <div id="content-core" tal:define="
+				existing_agreement view/existing_agreement;
+				valid_period view/valid_period;
+				image nocall:context/image;
+				rel view/get_related_content;">
+                <div class="container overflow-hidden">
+                    <div class="row column-gap-3">
+                        <div tal:condition="nocall:image"
+                            class="p-4 mb-4 card col-sm-12 col-lg-4 border-secondary text-white bg-secondary">
+                            <div class="p-4 bg-white">
+                                <img tal:attributes="
+						src string:${context/absolute_url}/@@images/image;
+						alt string: Card image cap">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-7 card-text pb-4">
+                            <p style="font-size: larger" tal:condition="context/title_prefix"
+                                tal:content="context/title_prefix"></p>
+                            <h1 tal:content="context/title">Title</h1>
+                            <div class="pt-4">
+                                <dl class="row">
+                                    <dt class="col-sm-12" i18n:translate="">Description</dt>
+                                    <dd class="col-sm-12" tal:content="context/description"> Description </dd>
+                                </dl>
+                                <dt class="col-sm-12" i18n:translate="">Relation</dt>
+                                <dd class="col-sm-12" tal:repeat="r rel">
+                                    <a tal:attributes="
+							href r/url;
+							class string:link-underline-dark link-dark" tal:content="r/title"></a>
+                                </dd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div tal:condition="existing_agreement" class="pb-4">
+                        <h2 i18n:translate="">Get the badge</h2>
+                        <p tal:define="email python:existing_agreement[0].getObject().email">
+                            <span tal:omit-tag="" i18n:translate="congratulations">Congratulations. You have already
+                                received your badge. It was issued for the e-mail address
+                                <span tal:content="email" i18n:name="email"></span>
+                                You can now download it. </span>.
+                        </p>
+                        <p>
+                            <a tal:define="url python:existing_agreement[0].getURL" tal:attributes="
+						class string:btn btn-secondary btn-iwm-gray;
+						href url;
+						role string:button" i18n:translate="">Go to Badge</a>
+                        </p>
+
+                    </div>
+
+                    <div tal:condition="python:not existing_agreement and valid_period" class="pb-4">
+                        <h2 i18n:translate="">Get the badge</h2>
+                        <p tal:content="context/criteria"></p>
+                        <form>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="agreement" value="agreement">
+                                <input name="form_sent" type="hidden" value="form_sent"> <label class="form-check-label"
+                                    for="exampleCheck1" i18n:translate="">I hereby confirm that I have fulfilled
+                                    the requirements.</label>
+                            </div>
+                            <button type="submit" class="btn btn-secondary btn-iwm-gray my-3" i18n:translate="">Create badge
+                                now</button>
+                        </form>
+                    </div>
+
+                    <div tal:condition="python: not valid_period and not existing_agreement" class="pb-4">
+                        <h2 i18n:translate="">Get the badge</h2>
+                        <p i18n:translate="">It is currently not possible to issue
+                            badges.</p>
+                    </div>
+                </div>
+            </div>
+        </metal:block>
+    </metal:content-core>
+</body>
+
+</html>

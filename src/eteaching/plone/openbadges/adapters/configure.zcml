@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="eteaching.plone.openbadges">
+
+	<adapter
+	    for="eteaching.plone.openbadges.content.open_badge.IOpenBadge"
+	    provides=".adapters.INameFromUUID"
+	    factory=".adapters.NameFromUUID"
+	/>
+
+	<adapter
+	    for="eteaching.plone.openbadges.content.badge_assertion.IBadgeAssertion"
+	    provides=".adapters.INameFromUUID"
+	    factory=".adapters.NameFromUUID"
+	/>
+
+</configure>
