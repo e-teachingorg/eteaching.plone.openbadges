@@ -17,7 +17,7 @@ Plone is enabled to host open badges with the add-on. The operator of the Plone 
 * Python 3.10, 3.12, 3.13
 * Git
 
-## Install with Plone 6.1 buildout (Linux Bash)
+## Install with Plone 6.1 buildout
 
 ```bash
 git clone https://github.com/e-teachingorg/eteaching.plone.openbadges.git
@@ -38,7 +38,7 @@ bin/instance fg
 * Goto admin --> configuration --> extensions
 * eteaching.plone.openbadges [Install]
 
-## Install as source packages using buildout (Linux Bash)
+## Install as source packages using buildout
 
 Open your dev.cfg
 
