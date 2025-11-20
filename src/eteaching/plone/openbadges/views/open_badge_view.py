@@ -61,7 +61,7 @@ class OpenBadgeView(BrowserView):
                             "that you have met the requirements?")
         agree = self.request.get("agreement")
         form_sent = self.request.get("form_sent")
-        if agree and not self.existing_agreement():
+        if agree and self.valid_period() and not self.existing_agreement():
             badge = self.context
             logged_in_user = plone.api.user.get_current()
             if logged_in_user_name():
