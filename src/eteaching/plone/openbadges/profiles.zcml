@@ -1,0 +1,34 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="eteaching.plone.openbadges"
+    >
+
+  <genericsetup:registerProfile
+      name="default"
+      title="eteaching.plone.openbadges: Install"
+      description="Package to configure a new eteaching.plone.openbadges site"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="eteaching.plone.openbadges: Uninstall"
+      description="Uninstall eteaching.plone.openbadges setup."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
+      post_handler=".setuphandlers.uninstall"
+      />
+
+  <!-- Hide Uninstall Profile-->
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="eteaching.plone.openbadges"
+      />
+
+
+  <include package=".upgrades" />
+
+</configure>

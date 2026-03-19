@@ -1,0 +1,15 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <!-- -*- extra stuff goes here -*- -->
+
+  <utility
+    component=".UserVocabularyFactory"
+    name="eteaching.plone.openbadges.UserVocabulary"
+    />
+
+  <utility
+    component=".BadgeTypeVocabularyFactory"
+    name="eteaching.plone.openbadges.BadgeTypeVocabulary"
+    />
+
+</configure>

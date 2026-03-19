@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <object name="portal_catalog">
 
 	<index name="recipient" meta_type="FieldIndex">
@@ -6,3 +6,4 @@
 	</index>
 
 </object>
+

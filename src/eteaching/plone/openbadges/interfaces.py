@@ -1,10 +1,10 @@
-# -*- coding: utf-8 -*-
 """Module where all interfaces, events and exceptions live."""
 
 from eteaching.plone.openbadges import _
 from plone.supermodel import model
 from zope import schema
 from zope.interface import Interface
+
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 

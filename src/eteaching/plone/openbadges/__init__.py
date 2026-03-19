@@ -1,6 +1,14 @@
-# -*- coding: utf-8 -*-
 """Init and utils."""
+
 from zope.i18nmessageid import MessageFactory
 
+import logging
 
-_ = MessageFactory("eteaching.plone.openbadges")
+
+__version__ = "1.0.5"
+
+PACKAGE_NAME = "eteaching.plone.openbadges"
+
+_ = MessageFactory(PACKAGE_NAME)
+
+logger = logging.getLogger(PACKAGE_NAME)
