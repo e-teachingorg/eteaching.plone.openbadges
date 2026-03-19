@@ -9,7 +9,7 @@ Once the add-on has been installed, the Plone CMS operator can act as the issuin
 - Provides a way to create Open Badges
 - Provides a way to host Open Badges
 - Provides a way to register an issuing organization
-- Provides a view that allows Open Badges to be viewed, shared, and validated.
+- Provides a view that allows Open Badges to be viewed, shared, and validated
 
 
 ## Prerequisites
