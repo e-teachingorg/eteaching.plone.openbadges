@@ -1,5 +1,5 @@
 from AccessControl.SecurityManagement import newSecurityManager
-from eteaching.plone.openbadges.interfaces import IBrowserLayer
+from eteaching.plone.openbadges.interfaces import IEteachingPloneOpenbadgesLayer
 from Products.CMFPlone.factory import _DEFAULT_PROFILE
 from Products.CMFPlone.factory import addPloneSite
 from Products.GenericSetup.tool import SetupTool
