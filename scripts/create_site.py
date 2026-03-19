@@ -32,7 +32,7 @@ app = makerequest(globals()["app"])
 
 request = app.REQUEST
 
-ifaces = [IBrowserLayer]
+ifaces = [IEteachingPloneOpenbadgesLayer]
 for iface in directlyProvidedBy(request):
     ifaces.append(iface)
 
