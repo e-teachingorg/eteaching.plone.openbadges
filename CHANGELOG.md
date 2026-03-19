@@ -9,14 +9,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 ### Fixed
 ### Removed
 
-## [1.0.3] - 2025-08-20
+## [1.0.4] - 2025-08-20
 
 ### Added
 - LinkedIn sharing
 
 ### Changed
 
-## [1.0.2] - 2025-06-18
+## [1.0.3] - 2025-06-18
 
 ### Added
 - Support for Plone 6.1
@@ -25,7 +25,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - Select2FieldWidget import
 
 
-## [1.0.1] - 2024-03-12
+## [1.0.2] - 2024-03-12
 
 ### Added
 - Controlpanel for settings
