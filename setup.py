@@ -6,15 +6,13 @@ from setuptools import setup
 
 long_description = "\n\n".join(
     [
-        open("README.md").read(),
-        open("CONTRIBUTORS.rst").read(),
-        open("CHANGELOG.md").read(),
+        open("README.rst").read()
     ]
 )
 
 setup(
     name='eteaching.plone.openbadges',
-    version='1.0',
+    version='1.0.3',
     description="Open Badge integration for Plone.",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
@@ -36,9 +34,11 @@ setup(
     author_email='m.schmidt@iwm-tuebingen.de',
     url='https://github.com/collective/eteaching.plone.openbadges',
     project_urls={
+        'Homepage': 'https://github.com/e-teachingorg/eteaching.plone.openbadges',
         'Source': 'https://github.com/e-teachingorg/eteaching.plone.openbadges',
         'Tracker': 'https://github.com/e-teachingorg/eteaching.plone.openbadges/issues',
         'Documentation': 'https://github.com/e-teachingorg/eteaching.plone.openbadges',
+        'ChangeLog': 'https://github.com/e-teachingorg/eteaching.plone.openbadges/blob/main/CHANGELOG.md',
     },
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),
