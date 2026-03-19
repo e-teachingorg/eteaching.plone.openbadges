@@ -12,7 +12,7 @@ long_description = "\n\n".join(
 
 setup(
     name='eteaching.plone.openbadges',
-    version='1.0.3',
+    version='1.0.4',
     description="Open Badge integration for Plone.",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
