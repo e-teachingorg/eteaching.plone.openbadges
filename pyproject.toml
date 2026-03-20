@@ -51,11 +51,12 @@ release = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/collective/eteaching.plone.openbadges"
+Homepage = "https://github.com/e-teachingorg/eteaching.plone.openbadges"
 PyPI = "https://pypi.org/project/eteaching.plone.openbadges"
-Source = "https://github.com/collective/eteaching.plone.openbadges"
-Tracker = "https://github.com/collective/eteaching.plone.openbadges/issues"
-
+Source = "https://github.com/e-teachingorg/eteaching.plone.openbadges"
+Tracker = "https://github.com/e-teachingorg/eteaching.plone.openbadges/issues"
+Documentation = "https://github.com/e-teachingorg/eteaching.plone.openbadges"
+ChangeLog = "https://github.com/e-teachingorg/eteaching.plone.openbadges/blob/main/CHANGELOG.md"
 
 [project.entry-points."plone.autoinclude.plugin"]
 target = "plone"
