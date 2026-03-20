@@ -23,7 +23,7 @@ Once the add-on has been installed, the Plone CMS operator can act as the issuin
 git clone https://github.com/e-teachingorg/eteaching.plone.openbadges.git
 cd eteaching.plone.openbadges
 python3 -m venv .
-bin/pip install -r https://dist.plone.org/release/6.1-latest/requirements.txt
+bin/pip install -r requirements.txt
 bin/buildout
 ```
 
