@@ -22,11 +22,13 @@ Once the add-on has been installed, the Plone CMS operator can act as the issuin
 ```bash
 git clone https://github.com/e-teachingorg/eteaching.plone.openbadges.git
 cd eteaching.plone.openbadges
+python3.12 -m venv .
+bin/pip3 install uv
 make install
 make create-site
 ```
 
-### Activate
+### Start
 
 ```bash
 make start
