@@ -7,7 +7,7 @@
   <genericsetup:registerProfile
       name="default"
       title="eteaching.plone.openbadges"
-      description="Package to configure a new eteaching.plone.openbadges site"
+      description="Open Badge integration for Plone 6."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       directory="profiles/default"
       post_handler=".setuphandlers.post_install"
