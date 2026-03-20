@@ -17,26 +17,22 @@ Once the add-on has been installed, the Plone CMS operator can act as the issuin
 * Python 3.10, 3.12, 3.13
 * Git
 
-## Install with Plone 6.1 buildout
+## Install
 
 ```bash
 git clone https://github.com/e-teachingorg/eteaching.plone.openbadges.git
 cd eteaching.plone.openbadges
-python3 -m venv .
-bin/pip install -r requirements.txt
-bin/buildout
+make install
+make create-site
 ```
 
 ### Activate
 
 ```bash
-bin/instance fg
+make start
 ```
 * Point your browser to http://localhost:8080
-* Add a new Plone Site (Classic UI)
 * Login with admin admin
-* Goto admin --> configuration --> extensions
-* eteaching.plone.openbadges [Install]
 
 ## Install as source packages using buildout
 
@@ -61,6 +57,8 @@ eteaching.plone.openbadges = git https://github.com/e-teachingorg/eteaching.plon
 ```
 
 ### Rerun buildout
+
+Please note that you need zc.buildout >= 5.1.1. Check requirements.txt
 
 ```bash
 bin/buildout -c dev.cfg
