@@ -22,7 +22,7 @@ Once the add-on has been installed, the Plone CMS operator can act as the issuin
 ```bash
 git clone https://github.com/e-teachingorg/eteaching.plone.openbadges.git
 cd eteaching.plone.openbadges
-python3.12 -m venv .
+python3 -m venv .
 bin/pip3 install uv
 make install
 make create-site
@@ -35,6 +35,26 @@ make start
 ```
 * Point your browser to http://localhost:8080
 * Login with admin admin
+
+
+## Install with existing Plone 6.1 buildout
+
+Please note that you need zc.buildout >= 5.1.1. Check requirements.txt
+
+Open your buildout.cfg
+
+```bash
+[instance]
+eggs +=
+    eteaching.plone.openbadges
+```
+
+### Rerun buildout
+
+```bash
+bin/buildout
+```
+
 
 ## Install as source packages using buildout
 
@@ -50,10 +70,6 @@ parts +=
 auto-checkout +=
     eteaching.plone.openbadges
 
-[instance]
-eggs +=
-    eteaching.plone.openbadges
-
 [sources]
 eteaching.plone.openbadges = git https://github.com/e-teachingorg/eteaching.plone.openbadges.git
 ```
@@ -64,6 +80,7 @@ Please note that you need zc.buildout >= 5.1.1. Check requirements.txt
 
 ```bash
 bin/buildout -c dev.cfg
+bin/pip3 install -e src/eteaching.plone.openbadges/
 ```
 
 ### Activate

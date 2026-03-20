@@ -6,7 +6,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="eteaching.plone.openbadges: Install"
+      title="eteaching.plone.openbadges"
       description="Package to configure a new eteaching.plone.openbadges site"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       directory="profiles/default"
@@ -15,7 +15,7 @@
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="eteaching.plone.openbadges: Uninstall"
+      title="eteaching.plone.openbadges"
       description="Uninstall eteaching.plone.openbadges setup."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       directory="profiles/uninstall"
