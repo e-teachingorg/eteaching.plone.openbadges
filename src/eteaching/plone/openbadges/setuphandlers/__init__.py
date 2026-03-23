@@ -33,6 +33,7 @@ def uninstall(context):
     """Uninstall script"""
     # Do something at the end of the uninstallation of this package.
     del_group_openbadge_manager()
+    unregister_controlpanel()
 
 
 def add_group_openbadge_manager():
@@ -64,3 +65,10 @@ def del_group_openbadge_manager():
             logger.info(f"{t} [Clould not be deleted]")
     else:
         logger.info(f"{t} [Group not found]")
+
+
+def unregister_controlpanel():
+    t = "Unregister controlpanel OpenBadgeSettings."
+    cp = api.portal.get_tool("portal_controlpanel")
+    cp.unregisterConfiglet("OpenBadgeSettings")
+    logger.info(f"{t} [OK]")
