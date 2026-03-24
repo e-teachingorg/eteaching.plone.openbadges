@@ -6,7 +6,7 @@
 - Incorrectly reported development status.
 
 ### Updated
-- German translation
+- German translation.
 
 ### Internal
 - Moved controlpanels from views to controlpanels.
