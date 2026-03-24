@@ -9,6 +9,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 - The control panel is not unregistered when the package is uninstalled.
 - Incorrectly reported development status.
 
+### Updated
+- German translation
+
 ### Internal
 - Moved controlpanels from views to controlpanels.
 
