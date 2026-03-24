@@ -13,6 +13,7 @@
         condition_expr=""
         url_expr="string:${portal_url}/@@open-badges-settings"
         visible="True"
+        icon_expr="string:award"
         i18n:attributes="title">
             <permission>eteaching.plone.openbadges: Manage OpenBadges</permission>
     </configlet>
