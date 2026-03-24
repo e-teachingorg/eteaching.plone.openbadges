@@ -5,8 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
 ## 1.1.1 (Unreleased)
 
-### Added
+### Fixed
 - Unregister controlpanel OpenBadgeSetting if uninstalled
+
+### Internal
+- Moved controlpanels from views to controlpanels
 
 ## 1.1.0 (2026-03-20)
 

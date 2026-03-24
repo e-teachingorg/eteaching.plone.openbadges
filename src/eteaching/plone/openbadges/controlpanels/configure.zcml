@@ -5,6 +5,26 @@
     i18n_domain="eteaching.plone.openbadges"
     >
 
+    <!-- OPEN BADGE SETTINGS CONTROL PANEL -->
+   
+    <include package="plone.app.registry" />
+    <browser:page
+        name="open-badges-settings"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".open_badge_settings.OpenBadgeSettingsControlPanel"
+        permission="eteaching.plone.openbadges.ManageOpenBadges"
+        />
+
+	<!-- REIMPORT PROFILE -->
+
+    <browser:page
+        name="reimport-profile-open-badges"
+        permission="cmf.ManagePortal"
+        class=".reimport_profile.Setup"
+        attribute="reimportProfile"
+        for="Products.CMFCore.interfaces.ISiteRoot"
+    />
+
   <!-- -*- extra stuff goes here -*- -->
 
 </configure>

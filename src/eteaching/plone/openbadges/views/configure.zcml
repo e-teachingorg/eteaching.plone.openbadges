@@ -5,33 +5,7 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="eteaching.plone.openbadges">
 
-
-    <!-- OPEN BADGE SETTINGS CONTROL PANEL -->
-  
-   
-    <include package="plone.app.registry" />
-    <browser:page
-        name="open-badges-settings"
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        class=".controlpanel.OpenBadgeSettingsControlPanel"
-        permission="eteaching.plone.openbadges.ManageOpenBadges"
-        />
-
-
-	<!-- REIMPORT PROFILE -->
-
-    <browser:page
-        name="reimport-profile-open-badges"
-        permission="cmf.ManagePortal"
-        class=".controlpanel.Setup"
-        attribute="reimportProfile"
-        for="Products.CMFCore.interfaces.ISiteRoot"
-    />
-
-
   <!-- CONTENT VIEWS PLONE-->
-
-  <!-- -*- extra stuff goes here -*- -->
 
   <browser:page
     name="assertion.json"
@@ -67,5 +41,7 @@
     permission="zope2.View"
     layer="eteaching.plone.openbadges.interfaces.IEteachingPloneOpenbadgesLayer"
     />
+
+  <!-- -*- extra stuff goes here -*- -->
 	  
 </configure>
