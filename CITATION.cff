@@ -12,5 +12,5 @@ repository-code: >-
   https://github.com/e-teachingorg/eteaching.plone.openbadges/
 abstract: 'Create, host, and display Open Badges with Plone'
 license: GPL-2.0
-version: '1.1.0'
+version: '1.1.1'
 date-released: '2026-03-20'
