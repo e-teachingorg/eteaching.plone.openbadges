@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-06-27 11:32+0000\n"
+"POT-Creation-Date: 2026-03-24 14:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Markus Schmidt <m.schmidt@iwm-tuebingen.de>\n"
 "Language-Team: German\n"
@@ -13,22 +13,6 @@ msgstr ""
 "Language-Name: Deutschh\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
-
-#: configure.zcml:26
-msgid "Installs the eteaching.plone.openbadges add-on."
-msgstr ""
-
-#: configure.zcml:26
-msgid "eteaching.plone.openbadges"
-msgstr ""
-
-#: configure.zcml:35
-msgid "Uninstalls the eteaching.plone.openbadges add-on."
-msgstr ""
-
-#: configure.zcml:35
-msgid "eteaching.plone.openbadges (uninstall)"
-msgstr ""
 
 #. Default: "Title"
 #: content/badge_assertion.py:19
@@ -98,49 +82,67 @@ msgid "label_allocation_period_end"
 msgstr "Ende des Vergabezeitraumes"
 
 #. Default: "Name"
-#: content/open_badge.py:75 interfaces.py:33
+#: content/open_badge.py:75 interfaces.py:34
 msgid "label_issuer_name"
 msgstr "Name der ausstellenden Organisation"
 
 #. Default: "URL"
-#: content/open_badge.py:81 interfaces.py:38
+#: content/open_badge.py:81 interfaces.py:39
 msgid "label_issuer_url"
 msgstr "URL der ausstellenden Organisation"
 
 #. Default: "Description"
-#: content/open_badge.py:87 interfaces.py:42
+#: content/open_badge.py:87 interfaces.py:43
 msgid "label_issuer_description"
 msgstr "Beschreibung der ausstellenden Organisation"
 
 #. Default: "Email"
-#: content/open_badge.py:93 interfaces.py:47
+#: content/open_badge.py:93 interfaces.py:48
 msgid "label_issuer_email"
 msgstr "E-Mail der ausstellenden Organisation"
 
 #. Default: "Issuer"
-#: content/open_badge.py:100 interfaces.py:52
+#: content/open_badge.py:100 interfaces.py:53
 msgid "label_schema_issuer"
 msgstr "Ausstellende Organisation"
 
+#: controlpanels/open_badge_settings.py:9
+msgid "OpenBadges settings"
+msgstr "OpenBadges Einstellungen"
+
+#. Default: "Badge storage root"
 #: interfaces.py:18
 msgid "badge_storage_root"
-msgstr ""
+msgstr "Badge Wurzelverzeichnis"
 
+#. Default: "The Badge storage root"
 #: interfaces.py:19
 msgid "help_badge_storage_root"
-msgstr ""
+msgstr "Das Wurzelverzeichnis, wo die Badges incl. der Assertions liegen"
 
 #. Default: "Title prefixes"
-#: interfaces.py:25
+#: interfaces.py:26
 msgid "label_title_prefix_def"
 msgstr "Titel Prefixe"
 
 #. Default: "The title prefixes are part of the title and can be predefined here. One prefix is always entered per line."
-#: interfaces.py:26
+#: interfaces.py:27
 msgid "help_title_prefix_def"
 msgstr ""
 "Title Prefixe sind Teil des Titels und können hier vordefiniert werden. Dazu "
 "wird immer ein Prefix pro Zeile eingetragen."
+
+#: profiles.zcml:14
+msgid "Open Badge integration for Plone 6."
+msgstr ""
+
+#: profiles.zcml:14
+msgid "eteaching.plone.openbadges"
+msgstr ""
+
+#: profiles.zcml:23
+msgid "Uninstall eteaching.plone.openbadges setup."
+msgstr ""
 
 #: profiles/default/controlpanel.xml
 msgid "OpenBadge Settings"
@@ -247,10 +249,6 @@ msgstr "E-Mail-Adresse"
 #: views/badge_assertion_view.pt:139
 msgid "Submit"
 msgstr "Validieren"
-
-#: views/controlpanel.py:10
-msgid "OpenBadges settings"
-msgstr "OpenBadges Einstellungen"
 
 #: views/open_badge_view.pt:44
 msgid "Get the badge"

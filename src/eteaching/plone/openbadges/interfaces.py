@@ -15,8 +15,9 @@ class IEteachingPloneOpenbadgesLayer(IDefaultBrowserLayer):
 class IOpenBadgesSettings(Interface):
 
     badge_storage_root = schema.TextLine(
-        title=_("badge_storage_root"),
-        description=_("help_badge_storage_root"),
+        title=_("badge_storage_root", default="Badge storage root"),
+        description=_("help_badge_storage_root",
+                      default="The Badge storage root"),
         required=False,
         default="community/badges",
     )
