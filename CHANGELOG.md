@@ -6,10 +6,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 ## 1.1.1 (Unreleased)
 
 ### Fixed
-- Unregister controlpanel OpenBadgeSetting if uninstalled
+- The control panel is not unregistered when the package is uninstalled.
+- Incorrectly reported development status.
 
 ### Internal
-- Moved controlpanels from views to controlpanels
+- Moved controlpanels from views to controlpanels.
 
 ## 1.1.0 (2026-03-20)
 
