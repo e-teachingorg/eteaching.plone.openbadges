@@ -6,64 +6,60 @@ from setuptools import setup
 
 long_description = "\n\n".join(
     [
-        open("README.rst").read()
+        open("README.md").read()
     ]
 )
 
 setup(
-    name='eteaching.plone.openbadges',
-    version='1.0.4',
-    description="Open Badge integration for Plone.",
+    name="eteaching.plone.openbadges",
+    version="1.1.2",
+    description="Open Badge integration for Plone 6.",
     long_description=long_description,
-    # Get more from https://pypi.org/classifiers/
+    long_description_content_type="text/markdown",
+    license="GPL-2.0-only",
+    python_requires=">=3.10",
+    author="Author Name",
+    author_email="a.email@mail.de",
+    url="https://test.de",
+    keywords=["CMS", "Plone", "Python"],
     classifiers=[
+        "Development Status :: 5 - Production/Stable",
         "Environment :: Web Environment",
         "Framework :: Plone",
-        "Framework :: Plone :: Addon",
+        "Framework :: Plone :: 6.0",
         "Framework :: Plone :: 6.1",
+        "Framework :: Plone :: 6.2",
+        "Framework :: Plone :: Addon",
+        "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3.13",
-        "Operating System :: OS Independent",
-        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
-    keywords='Python Plone CMS',
-    author='Markus Schmidt',
-    author_email='m.schmidt@iwm-tuebingen.de',
-    url='https://github.com/collective/eteaching.plone.openbadges',
-    project_urls={
-        'Homepage': 'https://github.com/e-teachingorg/eteaching.plone.openbadges',
-        'Source': 'https://github.com/e-teachingorg/eteaching.plone.openbadges',
-        'Tracker': 'https://github.com/e-teachingorg/eteaching.plone.openbadges/issues',
-        'Documentation': 'https://github.com/e-teachingorg/eteaching.plone.openbadges',
-        'ChangeLog': 'https://github.com/e-teachingorg/eteaching.plone.openbadges/blob/main/CHANGELOG.md',
-    },
-    license='GPL version 2',
-    packages=find_packages('src', exclude=['ez_setup']),
-    namespace_packages=['eteaching', 'eteaching.plone'],
-    package_dir={'': 'src'},
+    package_dir={"": "src"},
+    packages=find_packages("src", exclude=["ez_setup"]),
+    namespace_packages=["eteaching", "eteaching.plone"],
     include_package_data=True,
-    zip_safe=False,
-    python_requires=">=3.10",
     install_requires=[
-        'setuptools',
-        # -*- Extra requirements: -*-
-        'z3c.jbot',
-        'plone.api>=1.8.4',
-        'plone.app.dexterity',
-        "plone.app.event"
+        "Products.CMFPlone",
+        "plone.api",
+        "z3c.jbot",
     ],
     extras_require={
-        'test': [
-            'plone.app.testing',
-            # Plone KGS does not use this version, because it would break
-            # Remove if your package shall be part of coredev.
-            # plone_coredev tests as of 2016-04-01.
-            'plone.testing>=5.0.0',
-            'plone.app.contenttypes',
-            'plone.app.robotframework[debug]',
+        "test": [
+            "horse-with-no-namespace",
+            "plone.app.testing",
+            "plone.classicui",
+            "plone.restapi[test]",
+            "pytest",
+            "pytest-cov",
+            "pytest-plone>=1.0.0a2",
+        ],
+        "release": [
+            "zest.releaser[recommended]",
+            "zestreleaser.towncrier",
+            "zest.pocompile",
         ],
     },
     entry_points="""
