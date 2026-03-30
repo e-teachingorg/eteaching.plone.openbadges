@@ -2,35 +2,12 @@ from setuptools import setup, find_packages
 import pathlib
 import re
 
-# Version aus __init__.py ohne Import und ohne exec() extrahieren
-version_file = (
-    pathlib.Path(__file__).parent
-    / "src"
-    / "eteaching"
-    / "plone"
-    / "openbadges"
-    / "__init__.py"
-)
-
-with open(version_file, "r", encoding="utf-8") as f:
-    content = f.read()
-
-match = re.search(
-    r'__version__\s*=\s*[^\'"]+[\'"]',
-    content
-)
-
-if not match:
-    raise RuntimeError("Unable to find __version__ in __init__.py")
-
-package_version = match.group(1)
-
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
     name="eteaching.plone.openbadges",
-    version=package_version,
+    version="1.1.2",
     description="Open Badge integration for Plone 6.",
     long_description=long_description,
     long_description_content_type="text/markdown",
