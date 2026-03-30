@@ -53,7 +53,7 @@ all: build
 help: ## This help message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-requirements-mxdev.txt: pyproject.toml mx.ini ## Generate constraints file
+requirements-mxdev.txt: pyproject.hatch.toml mx.ini ## Generate constraints file
 	@echo "$(GREEN)==> Generate constraints file$(RESET)"
 	@echo '-c https://dist.plone.org/release/$(PLONE_VERSION)/constraints.txt' > requirements.txt
 	@uvx mxdev -c mx.ini
@@ -105,7 +105,7 @@ create-site: $(VENV_FOLDER) instance/etc/zope.ini ## Create a new site from scra
 .PHONY: lint
 lint: ## Check and fix code base according to Plone standards
 	@echo "$(GREEN)==> Lint codebase$(RESET)"
-	@uvx ruff@latest check --fix --config $(BACKEND_FOLDER)/pyproject.toml
+	@uvx ruff@latest check --fix --config $(BACKEND_FOLDER)/pyproject.hatch.toml
 	@uvx pyroma@latest -d .
 	@uvx check-python-versions@latest .
 	@uvx zpretty@latest --check src
@@ -113,8 +113,8 @@ lint: ## Check and fix code base according to Plone standards
 .PHONY: format
 format: ## Check and fix code base according to Plone standards
 	@echo "$(GREEN)==> Format codebase$(RESET)"
-	@uvx ruff@latest check --select I --fix --config $(BACKEND_FOLDER)/pyproject.toml
-	@uvx ruff@latest format --config $(BACKEND_FOLDER)/pyproject.toml
+	@uvx ruff@latest check --select I --fix --config $(BACKEND_FOLDER)/pyproject.hatch.toml
+	@uvx ruff@latest format --config $(BACKEND_FOLDER)/pyproject.hatch.toml
 	@uvx zpretty@latest -i src
 
 .PHONY: check
