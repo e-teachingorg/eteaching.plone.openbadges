@@ -5,7 +5,7 @@ from zope.i18nmessageid import MessageFactory
 import logging
 
 
-__version__ = "1.1.2"
+__version__ = "1.1.3"
 
 PACKAGE_NAME = "eteaching.plone.openbadges"
 
