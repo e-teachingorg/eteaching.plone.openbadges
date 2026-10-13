@@ -77,12 +77,19 @@ eteaching.plone.openbadges = git https://github.com/e-teachingorg/eteaching.plon
 
 ### Rerun buildout
 
-Please note that you need zc.buildout >= 5.1.1. Check requirements.txt
+Check requirements.txt. For zc.buildout>=5.1.1<6.0.0.0 you need:
 
 ```bash
 bin/buildout -c dev.cfg
 bin/pip3 install -e src/eteaching.plone.openbadges/
 ```
+
+Check requirements.txt. For zc.buildout>=6.0.0 you no longer need to install it via pip:
+
+```bash
+bin/buildout -c dev.cfg
+```
+
 
 ### Activate
 
